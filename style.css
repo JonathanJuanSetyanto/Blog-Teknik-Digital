@@ -1,0 +1,243 @@
+/* --- CSS Variables (Tema Gelap Modern) --- */
+:root {
+    --bg-body: #0f172a;       /* Latar Belakang Sangat Gelap (Navy) */
+    --bg-card: #1e293b;       /* Latar Kartu (Slate) */
+    --text-primary: #f1f5f9;  /* Putih Terang */
+    --text-secondary: #94a3b8;/* Abu-abu Kebiruan */
+    --accent: #38bdf8;        /* Biru Neon (Cyan) */
+    --accent-hover: #0ea5e9;  /* Biru lebih gelap untuk hover */
+    --border: #334155;        /* Garis Tepi Halus */
+    --gradient-header: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Reset & Base Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+/* --- Header Section --- */
+.header-section {
+    background: var(--gradient-header);
+    padding: 80px 20px 120px 20px; /* Padding bawah besar untuk efek overlap */
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+}
+
+.navbar {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--accent);
+}
+
+.nav-links a {
+    margin-left: 25px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.header-content {
+    margin-top: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-title {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+}
+
+.header-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* --- Main Content & Cards --- */
+.main-content {
+    max-width: 900px;
+    margin: -80px auto 60px; /* Margin negatif agar kartu naik ke header */
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.content-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-card);
+}
+
+.section-title {
+    color: var(--accent);
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(56, 189, 248, 0.1); /* Garis bawah tipis */
+}
+
+/* --- Typography Content --- */
+p {
+    margin-bottom: 1.5rem;
+    color: #cbd5e1; /* Warna teks isi sedikit lebih redup */
+}
+
+.feature-list {
+    list-style: none;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    padding-left: 5px;
+}
+
+.feature-list li:last-child { margin-bottom: 0; }
+.feature-list strong { color: #fff; }
+
+/* --- Table Styles (Dark Theme) --- */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: #0f172a; /* Warna tabel lebih gelap dari kartu */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.comparison-table th, 
+.comparison-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.comparison-table th {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.comparison-table td {
+    color: var(--text-primary);
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- Video Styles --- */
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+    border: 1px solid var(--border);
+    margin-bottom: 10px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+}
+
+.student-id {
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* --- Responsive Design (Mobile) --- */
+@media (max-width: 768px) {
+    .header-title { font-size: 2rem; }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-links a {
+        margin: 0 10px;
+        font-size: 0.85rem;
+    }
+
+    .main-content {
+        margin-top: -40px; /* Kurangi overlap di HP */
+    }
+
+    .content-card {
+        padding: 25px;
+    }
+}

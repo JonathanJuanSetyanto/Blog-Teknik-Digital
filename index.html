@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplexer & Demultiplexer | Teknik Digital</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header-section">
+        <div class="navbar">
+            <div class="nav-brand">TEKNIK DIGITAL (B)</div>
+            <nav class="nav-links">
+                <a href="#pendahuluan">Pendahuluan</a>
+                <a href="#multiplexer">Multiplexer</a>
+                <a href="#demultiplexer">Demultiplexer</a>
+                <a href="#video">Video</a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="header-title">Multiplexer & Demultiplexer</h1>
+            <p class="header-subtitle">
+                Memahami konsep "Many-to-One" dan "One-to-Many" dalam rangkaian logika digital serta aplikasinya pada
+                sistem komunikasi.
+            </p>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <section id="pendahuluan" class="content-card">
+            <h2 class="section-title">Pendahuluan</h2>
+            <p>
+                Dalam sistem digital modern, efisiensi jalur komunikasi adalah kunci. Seringkali kita perlu mengirimkan
+                data dari banyak sumber melalui satu kabel saja, atau sebaliknya, membagikan data dari satu kabel ke
+                banyak tujuan.
+            </p>
+            <p>
+                Disinilah peran <strong>Multiplexer (Mux)</strong> dan <strong>Demultiplexer (Demux)</strong>. Keduanya
+                bekerja berpasangan layaknya pengatur lalu lintas data yang canggih.
+            </p>
+        </section>
+
+        <section id="multiplexer" class="content-card">
+            <h2 class="section-title">1. Multiplexer (Mux)</h2>
+            <p>
+                Multiplexer adalah rangkaian logika yang berfungsi sebagai <strong>Data Selector</strong> (Pemilih
+                Data). Ia menerima banyak input data, namun hanya mengizinkan satu data untuk lewat ke output dalam satu
+                waktu.
+            </p>
+            <ul class="feature-list">
+                <li><strong>Prinsip:</strong> <em>Many-to-One</em> (Banyak ke Satu).</li>
+                <li><strong>Cara Kerja:</strong> Sinyal pada kaki <em>Selector</em> menentukan input mana yang terhubung
+                    ke output.</li>
+                <li><strong>Rumus:</strong> Input = 2<sup>n</sup>, dimana <em>n</em> adalah jumlah selector.</li>
+                <li><strong>Aplikasi:</strong> Penghematan jalur transmisi (telepon, internet).</li>
+            </ul>
+        </section>
+
+        <section id="demultiplexer" class="content-card">
+            <h2 class="section-title">2. Demultiplexer (Demux)</h2>
+            <p>
+                Demultiplexer adalah kebalikan dari Mux. Ia berfungsi sebagai <strong>Data Distributor</strong>. Ia
+                menerima data dari satu jalur input dan menyalurkannya ke salah satu dari banyak jalur output.
+            </p>
+            <ul class="feature-list">
+                <li><strong>Prinsip:</strong> <em>One-to-Many</em> (Satu ke Banyak).</li>
+                <li><strong>Cara Kerja:</strong> Sinyal selector mengarahkan data input ke pintu output yang spesifik.
+                </li>
+                <li><strong>Relasi:</strong> Sering digabungkan dengan decoder.</li>
+            </ul>
+        </section>
+
+        <section class="content-card">
+            <h2 class="section-title">Perbedaan Utama</h2>
+            <div class="table-responsive">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Fitur</th>
+                            <th>Multiplexer (Mux)</th>
+                            <th>Demultiplexer (Demux)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fungsi Utama</strong></td>
+                            <td>Memilih Data (Selector)</td>
+                            <td>Membagi Data (Distributor)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Arah Data</strong></td>
+                            <td>Banyak Input &rarr; 1 Output</td>
+                            <td>1 Input &rarr; Banyak Output</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lokasi</strong></td>
+                            <td>Sisi Pengirim (Transmitter)</td>
+                            <td>Sisi Penerima (Receiver)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="video" class="content-card">
+            <h2 class="section-title">Video Penjelasan</h2>
+
+            <div class="video-grid">
+                <div class="video-item">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/aQlF-9i3fAA" title="Multiplexer Explained"
+                            allowfullscreen></iframe>
+                    </div>
+                    <p class="video-caption">Video 1: Penjelasan & Implementasi Multiplexer</p>
+                </div>
+
+                <div class="video-item">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/eeWHM3zzK3M" title="Demultiplexer Explained"
+                            allowfullscreen></iframe>
+                    </div>
+                    <p class="video-caption">Video 2: Cara Kerja Demultiplexer</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Blog Teknik Digital.</p>
+        <p class="student-id">Morgan Immanuel Nainggolan (202431017) & Jonathan Juan Setyanto (202431029)</p>
+    </footer>
+
+</body>
+
+</html>
